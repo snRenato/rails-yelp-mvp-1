@@ -10,6 +10,6 @@ class Review < ApplicationRecord
   validates :rating,
             numericality: true,
             inclusion: {
-              in: 0..5
+              in: 1..5
             }
 end

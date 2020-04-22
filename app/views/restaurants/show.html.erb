@@ -1,0 +1,28 @@
+<h1 class="text-center">
+  <%= @restaurant.name %>
+</h1>
+<h2>
+  <strong>Category:</strong>
+  <%= @restaurant.category %>
+</h2>
+<h2>
+  <strong>Address:</strong>
+  <%= @restaurant.address %>
+</h2>
+<h2>
+  <strong>Phone Number:</strong>
+  <%= @restaurant.phone_number %>
+</h2>
+
+<hr>
+
+<h1 class="text-center">REVIEWS</h1>
+
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+  <li class="list-group-item d-flex justify-content-between">
+    <span><%= review.content %></span>
+    <span><%= '⭐' * review.rating %></span>
+  </li>
+  <% end %>
+</ul>

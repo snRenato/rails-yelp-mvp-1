@@ -1,0 +1,30 @@
+<table class="table">
+  <thead>
+    <tr class="text-center">
+      <th scope="col">Name</th>
+      <th scope="col">Stars</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @restaurants.each do |restaurant| %>
+    <tr class="text-center">
+      <td>
+        <%= link_to "#{restaurant.name}", restaurant_path(restaurant) %>
+      </td>
+      <td>
+        <%= '⭐' * Review.where(restaurant_id: restaurant.id)
+                          .average(:rating)
+                          .to_f
+        %>
+      </td>
+      <td>
+        <%= link_to 'Review', new_restaurant_review_path(restaurant),
+            class: 'btn btn-primary' %>
+      </td>
+    </tr>
+    <% end %>
+    </tr>
+  </tbody>
+</table>
