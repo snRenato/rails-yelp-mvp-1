@@ -1,4 +1,4 @@
-# SIMPLE YELP MVP APPLICATION BUILTED WITH RAILS
+# SIMPLE YELP MVP APPLICATION BUILT WITH RAILS
 
 In order to use this app, follow these instructions:
 
